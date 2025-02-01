@@ -10,9 +10,22 @@
 		E186BE9B2D4E24DF00BE04F6 /* AlmazCRMSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmazCRMSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E186BEAD2D4E2B6400BE04F6 /* Exceptions for "AlmazCRMSUI" folder in "AlmazCRMSUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E186BE9A2D4E24DF00BE04F6 /* AlmazCRMSUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E186BE9D2D4E24DF00BE04F6 /* AlmazCRMSUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E186BEAD2D4E2B6400BE04F6 /* Exceptions for "AlmazCRMSUI" folder in "AlmazCRMSUI" target */,
+			);
 			path = AlmazCRMSUI;
 			sourceTree = "<group>";
 		};
@@ -255,6 +268,7 @@
 				DEVELOPMENT_TEAM = Y3AFHFW5B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlmazCRMSUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,6 +299,7 @@
 				DEVELOPMENT_TEAM = Y3AFHFW5B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlmazCRMSUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

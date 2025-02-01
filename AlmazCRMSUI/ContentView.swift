@@ -9,10 +9,57 @@ import SwiftUI
 import WebKit
 
 struct ContentView: View {
+    // Переменная состояния для переключения экрана
+    @State private var showWebView = false
+
     var body: some View {
-        // WebView — это кастомная структура, которую мы создадим ниже
-        WebView(url: URL(string: "https://habr.com")!)
-//            .edgesIgnoringSafeArea(.all) // Чтобы WebView занял весь экран
+        VStack {
+            if showWebView {
+                // Если showWebView == true, показываем экран с WebView
+                WebViewScreen()
+                    .transition(.opacity) // Анимация перехода
+            } else {
+                // Если showWebView == false, показываем экран с логотипом
+                LogoScreen(showWebView: $showWebView)
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut, value: showWebView)
+    }
+}
+
+/// Экран с логотипом. При нажатии на логотип переключаемся на WebView.
+struct LogoScreen: View {
+    @Binding var showWebView: Bool  // Используем @Binding, чтобы изменить состояние в ContentView
+    
+    var body: some View {
+        // Просто для примера — логотип по центру экрана.
+        VStack {
+            Spacer()
+            
+            Image("almaz")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200)  // Ширина/высота подбирается по вкусу
+                .onTapGesture {
+                    // По нажатию показываем WebView
+                    showWebView = true
+                }
+            
+            Spacer()
+            
+            Text("Нажмите на логотип, чтобы открыть сайт")
+                .font(.headline)
+        }
+        .padding()
+    }
+}
+
+/// Экран с WebView, где открывается ваш сайт
+struct WebViewScreen: View {
+    var body: some View {
+        WebView(url: URL(string: "https://crm.wtvr.ru/")!)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
